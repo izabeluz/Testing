@@ -42,8 +42,8 @@ public class AllegroSearch {
     }
 
     @And("^choose categories computers$")
-    public void chooseCategoriesComputers() {
-        driver.findElement(By.xpath("(//a[contains(text(),'Komputery')])[3]")).click();
+    public void chooseCategoriesComputers(){
+        driver.get("https://allegro.pl/kategoria/komputery?bmatch=baseline-cl-eyesa2-dict43-ele-1-4-0205");
 
 
     }

@@ -5,6 +5,7 @@ import cucumber.api.java.en.And;
 import cucumber.api.java.en.Given;
 import cucumber.api.java.en.Then;
 import cucumber.api.java.en.When;
+import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 
@@ -34,24 +35,32 @@ public class AllegroSearch {
     }
 
     @When("^choose categories for electronics$")
-    public void chooseCategoriesForElectronics() {
+    public void chooseCategoriesForElectronics(){
+        driver.get("https://allegro.pl/dzial/elektronika");
+
 
     }
 
-    @And("^I choose categories computers$")
-    public void iChooseCategoriesComputers() {
+    @And("^choose categories computers$")
+    public void chooseCategoriesComputers() {
+        driver.findElement(By.xpath("(//a[contains(text(),'Komputery')])[3]")).click();
+
+
     }
 
-    @And("^I choose printer categories and scanners$")
-    public void iChoosePrinterCategoriesAndScanners() {
+    @And("^choose printer categories and scanners$")
+    public void choosePrinterCategoriesAndScanners() {
+
+
     }
 
-    @Then("^I click the first of the promoted offers$")
-    public void iClickTheFirstOfThePromotedOffers() {
+    @Then("^click the first of the promoted offers$")
+    public void clickTheFirstOfThePromotedOffers() {
+
     }
 
-    @Then("^I click buy now$")
-    public void iClickBuyNow() {
+    @Then("^click buy now$")
+    public void clickBuyNow() {
     }
 
     @Then("^login page appears$")

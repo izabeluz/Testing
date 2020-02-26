@@ -50,6 +50,7 @@ public class AllegroSearch {
 
     @And("^choose printer categories and scanners$")
     public void choosePrinterCategoriesAndScanners() {
+        driver.findElement(By.xpath("(//a[contains(text(),'Drukarki i skanery')])[2]")).click();
 
 
     }

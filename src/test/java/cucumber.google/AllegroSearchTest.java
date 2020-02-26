@@ -6,7 +6,7 @@ import cucumber.api.junit.Cucumber;
 import org.junit.runner.RunWith;
 
 @RunWith(Cucumber.class)
-@CucumberOptions(features = "src/Cucumber/Features/allegro.feature",
+@CucumberOptions(features = "src/BDD/Features/allegro.feature",
         plugin = {"pretty", "html:out"})
-public class AllegroTest {
+public class AllegroSearchTest {
 }

@@ -57,15 +57,19 @@ public class AllegroSearch {
 
     @Then("^click the first of the promoted offers$")
     public void clickTheFirstOfThePromotedOffers() {
+        driver.findElement(By.linkText("Drukarka HP Deskjet 3720 tusz nr 304")).click();
 
     }
 
     @Then("^click buy now$")
     public void clickBuyNow() {
+        driver.findElement(By.id("buy-now-button")).click();
+
     }
 
     @Then("^login page appears$")
     public void loginPageAppears() {
+
     }
 
 

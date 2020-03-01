@@ -1,12 +1,14 @@
 package cucumber.google;
 
-import cucumber.api.PendingException;
+
 import cucumber.api.java.en.And;
 import cucumber.api.java.en.Given;
 import cucumber.api.java.en.Then;
 import cucumber.api.java.en.When;
+import org.junit.Assert;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
 
 import java.util.Random;
@@ -23,26 +25,44 @@ public class AllegroSearch {
         driver = new ChromeDriver();
         driver.manage().window().maximize();
         driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
-
-
     }
 
-    @Given("^as a user I opened page \"([^\"]*)\"$")
-    public void asAUserIOpenedPage(String websiteAdress) {
-        setUp();
-        driver.get(websiteAdress);
 
+    @Given("^as a user I opened page \"([^\"]*)\"$")
+    public void asAUserIOpenedPage(String websiteAddress) {
+        setUp();
+        driver.get(websiteAddress);
+    }
+
+    @When("^agreement window appears$")
+    public void agreementWindowAppears() {
+        Assert.assertNotNull(driver.findElement(By.xpath("//div[@aria-labelledby='dialog-title']")));
+    }
+
+    @Then("^close agreement window$")
+    public void closeAgreementWindow() {
+        driver.findElement(By.xpath("//div[@aria-labelledby='dialog-title']/button")).click();
+    }
+
+    @And("^choose department Elektronika$")
+    public void chooseDepartmentElectronic() {
+        driver.findElement(By.xpath("//div[@data-box-name='departments']/div/div[@data-group-id='departments_Elektronika']/a")).click();
+    }
+
+    @And("^choose category Komputery$")
+    public void chooseCategoryKomputery() {
+        driver.findElement(By.xpath("//div[@data-box-name='category - Elektronika']/a")).click();
     }
 
     @When("^choose categories for electronics$")
-    public void chooseCategoriesForElectronics(){
+    public void chooseCategoriesForElectronics() {
         driver.get("https://allegro.pl/dzial/elektronika");
 
 
     }
 
     @And("^choose categories computers$")
-    public void chooseCategoriesComputers(){
+    public void chooseCategoriesComputers() {
         driver.get("https://allegro.pl/kategoria/komputery?bmatch=baseline-cl-eyesa2-dict43-ele-1-4-0205");
 
 

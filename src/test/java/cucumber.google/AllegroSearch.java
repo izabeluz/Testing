@@ -51,26 +51,13 @@ public class AllegroSearch {
 
     @And("^choose category Komputery$")
     public void chooseCategoryKomputery() {
-        driver.findElement(By.xpath("//div[@data-box-name='category - Elektronika']/a")).click();
+        driver.findElement(By.xpath("//div[@data-box-name='category - Elektronika']/div/ul/li[2]/a")).click();
     }
 
-    @When("^choose categories for electronics$")
-    public void chooseCategoriesForElectronics() {
-        driver.get("https://allegro.pl/dzial/elektronika");
-
-
-    }
-
-    @And("^choose categories computers$")
-    public void chooseCategoriesComputers() {
-        driver.get("https://allegro.pl/kategoria/komputery?bmatch=baseline-cl-eyesa2-dict43-ele-1-4-0205");
-
-
-    }
 
     @And("^choose printer categories and scanners$")
     public void choosePrinterCategoriesAndScanners() {
-        driver.findElement(By.xpath("(//a[contains(text(),'Drukarki i skanery')])[2]")).click();
+        driver.findElement(By.xpath("//div[@data-box-name='Categories']/div/section/div/ul/li[3]/a")).click();
 
 
     }

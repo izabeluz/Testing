@@ -6,3 +6,4 @@ Feature: finding the right equipment
     Then close agreement window
     And  choose department Elektronika
     And  choose category Komputery
+   And choose printer categories and scanners

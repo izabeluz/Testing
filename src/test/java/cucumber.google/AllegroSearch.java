@@ -57,27 +57,11 @@ public class AllegroSearch {
 
     @And("^choose printer categories and scanners$")
     public void choosePrinterCategoriesAndScanners() {
-        driver.findElement(By.xpath("//div[@data-box-name='Categories']/div/section/div[2]/ul/li[3]/a")).click();
-
-
+        driver.findElement(By.xpath("//div[@id=\"opbox-category-tree\"]//a[text()=\"Drukarki i skanery\"]")).click();
+      //  driver.findElement(By.xpath("//div[@data-box-name='Categories']]//a[text()='Drukarki i skanery']")).click();
     }
 
-    @Then("^click the first of the promoted offers$")
-    public void clickTheFirstOfThePromotedOffers() {
-        driver.findElement(By.linkText("Drukarka HP Deskjet 3720 tusz nr 304")).click();
 
-    }
-
-    @Then("^click buy now$")
-    public void clickBuyNow() {
-        driver.findElement(By.id("buy-now-button")).click();
-
-    }
-
-    @Then("^login page appears$")
-    public void loginPageAppears() {
-
-    }
 
 
 

@@ -11,6 +11,7 @@ import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
 
+import java.util.ArrayList;
 import java.util.Random;
 import java.util.concurrent.TimeUnit;
 
@@ -56,11 +57,21 @@ public class AllegroSearch {
 
 
     @And("^choose printer categories and scanners$")
-    public void choosePrinterCategoriesAndScanners() {
-        driver.findElement(By.xpath("//div[@data-box-name='Categories']/div/section/div[2]/ul/li[3]/a")).click();
+    public void choosePrinterCategoriesAndScanners(){
+    closePreviousTab();
+        driver.findElement(By.xpath("//div[@data-box-name='Categories']//a[text()='Drukarki i skanery']")).click();}
 
 
-    }
+    private void closePreviousTab() {
+
+        final ArrayList<String> tabs = new ArrayList<>(driver.getWindowHandles());
+        tabs.stream().forEach(System.out::println);
+        driver.switchTo().window(tabs.get(0));
+        driver.close();
+        driver.switchTo().window(tabs.get(1));}
+
+
+
 
     @Then("^click the first of the promoted offers$")
     public void clickTheFirstOfThePromotedOffers() {

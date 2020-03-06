@@ -1,6 +1,5 @@
 package cucumber.google;
 
-
 import cucumber.api.java.en.And;
 import cucumber.api.java.en.Given;
 import cucumber.api.java.en.Then;
@@ -8,16 +7,15 @@ import cucumber.api.java.en.When;
 import org.junit.Assert;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
-import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
 
+import java.util.ArrayList;
 import java.util.Random;
 import java.util.concurrent.TimeUnit;
 
 public class AllegroSearch {
 
     private WebDriver driver;
-    private Random random = new Random();
 
     private void setUp() {
         System.setProperty("webdriver.chrome.driver",
@@ -57,12 +55,17 @@ public class AllegroSearch {
 
     @And("^choose printer categories and scanners$")
     public void choosePrinterCategoriesAndScanners() {
-        driver.findElement(By.xpath("//div[@id=\"opbox-category-tree\"]//a[text()=\"Drukarki i skanery\"]")).click();
-      //  driver.findElement(By.xpath("//div[@data-box-name='Categories']]//a[text()='Drukarki i skanery']")).click();
+        closePreviousTab();
+        driver.findElement(By.xpath("//div[@data-box-name='Categories']//a[text()='Drukarki i skanery']")).click();
     }
 
-
-
+    private void closePreviousTab() {
+        final ArrayList<String> tabs = new ArrayList<>(driver.getWindowHandles());
+        tabs.stream().forEach(System.out::println);
+        driver.switchTo().window(tabs.get(0));
+        driver.close();
+        driver.switchTo().window(tabs.get(1));
+    }
 
 
 }

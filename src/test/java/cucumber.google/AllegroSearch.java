@@ -74,12 +74,12 @@ public class AllegroSearch {
 
     @Then("^click the first of the promoted offers$")
     public void clickTheFirstOfThePromotedOffers() {
-        driver.findElement(By.xpath("//div[@id='opbox-listing--base']/div/section[2]/section/article/div/div/div[2]/div[1]/h2/a")).click();
-    }
+        driver.findElement(By.xpath("//div[@id='opbox-listing--base']/div/section[1]/section/article[1]")).click();
+    }//
 
     @Then("^click buy now$")
     public void clickBuyNow() {
-        driver.findElement(By.id("buy-now-button")).click();
+
 
     }
 

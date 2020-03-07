@@ -72,11 +72,9 @@ public class AllegroSearch {
 
 
 
-
     @Then("^click the first of the promoted offers$")
     public void clickTheFirstOfThePromotedOffers() {
-        driver.findElement(By.linkText("Drukarka HP Deskjet 3720 tusz nr 304")).click();
-
+        driver.findElement(By.xpath("//div[@id='opbox-listing--base']/div/section[2]/section/article/div/div/div[2]/div[1]/h2/a")).click();
     }
 
     @Then("^click buy now$")

@@ -8,3 +8,4 @@ Feature: finding the right equipment
     And  choose category Komputery
     And choose printer categories and scanners
     Then click the first of the promoted offers
+     Then click buy now

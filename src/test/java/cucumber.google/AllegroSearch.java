@@ -70,24 +70,30 @@ public class AllegroSearch {
         driver.close();
         driver.switchTo().window(tabs.get(1));}
 
+    @And("^selects filter kup teraz$")
+    public void selectsFilterKupTeraz() {
+        driver.findElement(By.xpath("//div[@id='opbox-listing-filters']/div/fieldset[3]/div/ul/li/label")).click();
+
+    }
 
 
-    @Then("^click the first of the promoted offers$")
+    @And("^click the first of the promoted offers$")
     public void clickTheFirstOfThePromotedOffers() {
-        driver.findElement(By.xpath("//div[@id='opbox-listing--base']/div/section[1]/section/article[1]")).click();
-    }//
-
-    @Then("^click buy now$")
-    public void clickBuyNow() {
+        driver.findElement(By.xpath("//div[@id='opbox-listing--base']/div/section[1]/section/article[1]")).click();}
 
 
+        @When("^button Kup teraz is visible$")
+        public void buttonKupTerazIsVisible() {
+            //Assert.assertNotNull(driver.findElement(By.xpath("//div[@data-role='app-container']//[text()='buy-now-button']")));
     }
 
-    @Then("^login page appears$")
-    public void loginPageAppears() {
 
+
+    @Then("^Kup teraz button is visible$")
+    public void kupTerazButtonIsVisible() {
     }
-
 
 
 }
+
+

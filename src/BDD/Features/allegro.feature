@@ -9,7 +9,7 @@ Feature: finding the right equipment
     And choose printer categories and scanners
     And selects filter kup teraz
     And click the first of the promoted offers
-    When button Kup teraz is visible
-    Then Kup teraz button is visible
+    Then button Kup teraz is visible
+
 
 

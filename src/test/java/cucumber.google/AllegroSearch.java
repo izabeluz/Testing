@@ -86,7 +86,7 @@ public class AllegroSearch {
 
     @Then("^button Kup teraz is visible$")
     public void buttonKupTerazIsVisible() {
-        // Assert.assertNotNull(driver.findElement(By.xpath("//div[@data-role='app-container']//[id()='buy-now-button']")));
+       //Assert.assertNotNull(driver.findElement(By.xpath("//div[@data-role='app-container']//[@id()='buy now button']")));
     }
 
 

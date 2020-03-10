@@ -68,8 +68,15 @@ public class AllegroFiltringBuyNow {
         driver.findElement(By.xpath("//div[@id='opbox-listing-filters']//a/span[text()='kup teraz']")).click();
         driver.manage().timeouts().implicitlyWait(3, TimeUnit.SECONDS);
 
-
     }
+    @And("^close Kurier w allegro popup if visible$")
+    public void closeKurierWAllegroIfVisible() {
+        final WebElement element = driver.findElement(By.xpath("//div[@id='opbox-listing-filters']//button[text()='zamknij']"));
+        if (element != null)
+            element.click();
+        }
+
+
 
     @And("^click the first of the promoted offers$")
     public void clickTheFirstOfThePromotedOffers() {

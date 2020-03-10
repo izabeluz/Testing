@@ -62,20 +62,18 @@ public class AllegroSearch {
         driver.findElement(By.xpath("//div[@data-box-name='Categories']//a[text()='Drukarki i skanery']")).click();
     }
 
-
-    private void closePreviousTab() {
-
-        final ArrayList<String> tabs = new ArrayList<>(driver.getWindowHandles());
-        tabs.stream().forEach(System.out::println);
-        driver.switchTo().window(tabs.get(0));
-        driver.close();
-        driver.switchTo().window(tabs.get(1));
-    }
-
     @And("^selects filter kup teraz$")
     public void selectsFilterKupTeraz() {
         driver.findElement(By.xpath("//div[@id='opbox-listing-filters']//a/span[text()='kup teraz']")).click();
-        driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
+        driver.manage().timeouts().implicitlyWait(3, TimeUnit.SECONDS);
+    }
+
+    @And("^close Kurier w allegro popup if visible$")
+    public void closeKurierWAllegroIfVisible() {
+        final WebElement element = driver.findElement(By.xpath("//div[@id='opbox-listing-filters']//button[text()='zamknij']"));
+        if (element != null) {
+            element.click();
+        }
     }
 
     @And("^click the first of the promoted offers$")
@@ -83,10 +81,17 @@ public class AllegroSearch {
         driver.findElement(By.xpath("//div[@id='opbox-listing--base']/div/section[2]/section/article[1]")).click();
     }
 
-
     @Then("^button Kup teraz is visible$")
     public void buttonKupTerazIsVisible() {
-       //Assert.assertNotNull(driver.findElement(By.xpath("//div[@data-role='app-container']//[@id()='buy now button']")));
+        Assert.assertNotNull(driver.findElement(By.xpath("//div[@data-role='app-container']//button[@id='buy-now-button']")));
+    }
+
+    private void closePreviousTab() {
+        final ArrayList<String> tabs = new ArrayList<>(driver.getWindowHandles());
+        tabs.stream().forEach(System.out::println);
+        driver.switchTo().window(tabs.get(0));
+        driver.close();
+        driver.switchTo().window(tabs.get(1));
     }
 
 

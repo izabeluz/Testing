@@ -82,15 +82,11 @@ import java.util.concurrent.TimeUnit;
             driver.findElement(By.xpath("//div[@id='opbox-listing--base']/div/section[2]/section/article[1]")).click();
         }
 
-
         @Then("^button kup teraz is not visible$")
-        public void buttonKupTerazIsVisible() {
+        public void buttonKupTerazIsNotVisible() {
             final WebElement element = (driver.findElement(By.xpath("//div[@data-role='app-container']//button[@id='buy-now-button']")));
-            if (element !=null)
-                element.click();
-
+            if (element !=null) ;
         }
-
 
         private void closePreviousTab() {
             final ArrayList<String> tabs = new ArrayList<>(driver.getWindowHandles());

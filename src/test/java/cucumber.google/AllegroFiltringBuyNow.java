@@ -65,7 +65,7 @@ public class AllegroFiltringBuyNow {
 
     @And("^selects filter kup teraz$")
     public void selectsFilterKupTeraz() {
-        driver.findElement(By.xpath("//div[@id='opbox-listing-filters']//a/span[text()='kup teraz']")).click();
+        driver.findElement(By.xpath("//div[@class='opbox-listing-filters']//a/span[text()='kup teraz']")).click();
         driver.manage().timeouts().implicitlyWait(3, TimeUnit.SECONDS);
 
     }

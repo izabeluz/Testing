@@ -1,4 +1,4 @@
-package cucumber.google;
+package pl.pawlak.allegro;
 
 
 import cucumber.api.java.en.And;
@@ -15,7 +15,7 @@ import java.util.ArrayList;
 import java.util.Random;
 import java.util.concurrent.TimeUnit;
 
-public class AllegroFiltringBuyNow {
+public class Allegro {
 
     private WebDriver driver;
     private Random random = new Random();
@@ -60,12 +60,20 @@ public class AllegroFiltringBuyNow {
     public void choosePrinterCategoriesAndScanners() {
         closePreviousTab();
         driver.findElement(By.xpath("//div[@data-box-name='Categories']//a[text()='Drukarki i skanery']")).click();
+
+    }
+
+    @And("^close Kurier w allegro popup if visible$")
+    public void closeKurierWAllegroIfVisible() {
+        final WebElement element = driver.findElement(By.xpath("//div[@id='opbox-listing-filters']//button[text()='zamknij']"));
+        if (element != null)
+            element.click();
     }
 
 
     @And("^selects filter kup teraz$")
     public void selectsFilterKupTeraz() {
-        driver.findElement(By.xpath("//div[@id='opbox-listing-filters']//a/span[text()='kup teraz']")).click();
+        driver.findElement(By.xpath("//div[@class='opbox-listing-filters']//a/span[text()='kup teraz']")).click();
         driver.manage().timeouts().implicitlyWait(3, TimeUnit.SECONDS);
 
     }
@@ -78,9 +86,10 @@ public class AllegroFiltringBuyNow {
 
     @Then("^button Kup teraz is visible$")
     public void buttonKupTerazIsVisible() {
-       Assert.assertNotNull(driver.findElement(By.xpath("//div[@data-role='app-container']//button[@id='buy-now-button']")));
+        Assert.assertNotNull(driver.findElement(By.xpath("//div[@data-role='app-container']//button[@id='buy-now-button']")));
 
     }
+
     private void closePreviousTab() {
         final ArrayList<String> tabs = new ArrayList<>(driver.getWindowHandles());
         tabs.stream().forEach(System.out::println);

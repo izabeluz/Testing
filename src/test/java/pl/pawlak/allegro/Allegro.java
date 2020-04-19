@@ -17,86 +17,86 @@ import java.util.concurrent.TimeUnit;
 
 public class Allegro {
 
-    private WebDriver driver;
-    private Random random = new Random();
+  private WebDriver driver;
+  private Random random = new Random();
 
-    private void setUp() {
-        System.setProperty("webdriver.chrome.driver",
-                "src/main/resources/chromedriver.exe");
-        driver = new ChromeDriver();
-        driver.manage().window().maximize();
-        driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
-    }
-
-
-    @Given("^as a user I opened page \"([^\"]*)\"$")
-    public void asAUserIOpenedPage(String websiteAddress) {
-        setUp();
-        driver.get(websiteAddress);
-    }
-
-    @When("^agreement window appears$")
-    public void agreementWindowAppears() {
-        Assert.assertNotNull(driver.findElement(By.xpath("//div[@aria-labelledby='dialog-title']")));
-    }
-
-    @Then("^close agreement window$")
-    public void closeAgreementWindow() {
-        driver.findElement(By.xpath("//div[@aria-labelledby='dialog-title']/button")).click();
-    }
-
-    @And("^choose department Elektronika$")
-    public void chooseDepartmentElectronic() {
-        driver.findElement(By.xpath("//div[@data-box-name='departments']/div/div[@data-group-id='departments_Elektronika']/a")).click();
-    }
-
-    @And("^choose category Komputery$")
-    public void chooseCategoryKomputery() {
-        driver.findElement(By.xpath("//div[@data-box-name='category - Elektronika']/div/ul/li[2]/a")).click();
-    }
+  private void setUp() {
+    System.setProperty("webdriver.chrome.driver",
+        "src/main/resources/chromedriver.exe");
+    driver = new ChromeDriver();
+    driver.manage().window().maximize();
+    driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
+  }
 
 
-    @And("^choose printer categories and scanners$")
-    public void choosePrinterCategoriesAndScanners() {
-        closePreviousTab();
-        driver.findElement(By.xpath("//div[@data-box-name='Categories']//a[text()='Drukarki i skanery']")).click();
+  @Given("^as a user I opened page \"([^\"]*)\"$")
+  public void asAUserIOpenedPage(String websiteAddress) {
+    setUp();
+    driver.get(websiteAddress);
+  }
 
-    }
+  @When("^agreement window appears$")
+  public void agreementWindowAppears() {
+    Assert.assertNotNull(driver.findElement(By.xpath("//div[@aria-labelledby='dialog-title']")));
+  }
 
-    @And("^close Kurier w allegro popup if visible$")
-    public void closeKurierWAllegroIfVisible() {
-        final WebElement element = driver.findElement(By.xpath("//div[@id='opbox-listing-filters']//button[text()='zamknij']"));
-        if (element != null)
-            element.click();
-    }
+  @Then("^close agreement window$")
+  public void closeAgreementWindow() {
+    driver.findElement(By.xpath("//div[@aria-labelledby='dialog-title']/button")).click();
+  }
 
+  @And("^choose department Elektronika$")
+  public void chooseDepartmentElectronic() {
+    driver.findElement(By.xpath("//div[@data-box-name='departments']/div/div[@data-group-id='departments_Elektronika']/a")).click();
+  }
 
-    @And("^selects filter kup teraz$")
-    public void selectsFilterKupTeraz() {
-        driver.findElement(By.xpath("//div[@class='opbox-listing-filters']//a/span[text()='kup teraz']")).click();
-        driver.manage().timeouts().implicitlyWait(3, TimeUnit.SECONDS);
-
-    }
-
-    @And("^click the first of the promoted offers$")
-    public void clickTheFirstOfThePromotedOffers() {
-        driver.findElement(By.xpath("//div[@id='opbox-listing--base']/div/section[2]/section/article[1]")).click();
-    }
+  @And("^choose category Komputery$")
+  public void chooseCategoryKomputery() {
+    driver.findElement(By.xpath("//div[@data-box-name='category - Elektronika']/div/ul/li[2]/a")).click();
+  }
 
 
-    @Then("^button Kup teraz is visible$")
-    public void buttonKupTerazIsVisible() {
-        Assert.assertNotNull(driver.findElement(By.xpath("//div[@data-role='app-container']//button[@id='buy-now-button']")));
+  @And("^choose printer categories and scanners$")
+  public void choosePrinterCategoriesAndScanners() {
+    closePreviousTab();
+    driver.findElement(By.xpath("//div[@data-box-name='Categories']//a[text()='Drukarki i skanery']")).click();
 
-    }
+  }
 
-    private void closePreviousTab() {
-        final ArrayList<String> tabs = new ArrayList<>(driver.getWindowHandles());
-        tabs.stream().forEach(System.out::println);
-        driver.switchTo().window(tabs.get(0));
-        driver.close();
-        driver.switchTo().window(tabs.get(1));
-    }
+  @And("^close Kurier w allegro popup if visible$")
+  public void closeKurierWAllegroIfVisible() {
+    final WebElement element = driver.findElement(By.xpath("//div[@id='opbox-listing-filters']//button[text()='zamknij']"));
+    if (element != null)
+      element.click();
+  }
+
+
+  @And("^selects filter kup teraz$")
+  public void selectsFilterKupTeraz() {
+    driver.findElement(By.xpath("//div[@class='opbox-listing-filters']//a/span[text()='kup teraz']")).click();
+    driver.manage().timeouts().implicitlyWait(3, TimeUnit.SECONDS);
+
+  }
+
+  @And("^click the first of the promoted offers$")
+  public void clickTheFirstOfThePromotedOffers() {
+    driver.findElement(By.xpath("//div[@id='opbox-listing--base']/div/section[2]/section/article[1]")).click();
+  }
+
+
+  @Then("^button Kup teraz is visible$")
+  public void buttonKupTerazIsVisible() {
+    Assert.assertNotNull(driver.findElement(By.xpath("//div[@data-role='app-container']//button[@id='buy-now-button']")));
+
+  }
+
+  private void closePreviousTab() {
+    final ArrayList<String> tabs = new ArrayList<>(driver.getWindowHandles());
+    tabs.stream().forEach(System.out::println);
+    driver.switchTo().window(tabs.get(0));
+    driver.close();
+    driver.switchTo().window(tabs.get(1));
+  }
 
 
 }

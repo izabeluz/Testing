@@ -32,7 +32,30 @@ public class Test2 {
     System.out.println("");
     System.out.println("Ilość liczb podzielnych przez 7 to: " + licznik);
 
+
+    System.out.println("");
+    System.out.println("");
+
+
+    // ile liczb od 1 w góre jest potrzebnych, aaby ich suma przekroczyła wartosc 800
+    // 1  = 1 , 3, 6 , 10, 15, 21, 28 ... 830
+    // Potrzeba symu od 1 do 23 liczb aby przekroczyc 800
+    int i = 1;
+    int suma = 0;//początkowa wartość
+    while (suma <= 800) {
+      i++;
+      suma = suma + i;
+
+    }
+    System.out.println("Aby suma liczb wyszła ponad 800 potrzeba jest liczb:" + i);
   }
 }
+
+
+// i     0   1   2   3   4
+// suma  0   1   3   6   10
+
+
+
 
 

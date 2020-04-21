@@ -18,8 +18,6 @@ public class Test3 {
         licznik++;
         System.out.print(tab1[i] + ",");
       }
-
-
     }
 
   }

@@ -68,6 +68,12 @@ public class Allegro {
     final WebElement element = driver.findElement(By.xpath("//div[@id='opbox-listing-filters']//button[text()='zamknij']"));
     if (element != null)
       element.click();
+
+
+
+  }@And("^selects filter auction$")
+  public void selectsFilterAuction() {
+    driver.findElement(By.xpath("//div[@class='opbox-listing-filters'}//a/span[text() ='auction']")).click();
   }
 
 
@@ -97,6 +103,7 @@ public class Allegro {
     driver.close();
     driver.switchTo().window(tabs.get(1));
   }
+
 
 
 }

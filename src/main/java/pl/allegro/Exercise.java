@@ -1,6 +1,6 @@
 package pl.allegro;
 
-public class Test2 {
+public class Exercise {
   public static void main(String[] args) {
     System.out.print("Liczby podzielne przez 7 z zakresu od 13 do 170 to :");
     int licznik = 0;

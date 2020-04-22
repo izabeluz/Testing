@@ -33,9 +33,6 @@ public class Exercise {
   }
 
 
-
-
-
   // ile liczb od 1 w góre jest potrzebnych, aaby ich suma przekroczyła wartosc 800
   // 1  = 1 , 3, 6 , 10, 15, 21, 28 ... 830
   // Potrzeba symu od 1 do 23 liczb aby przekroczyc 800
@@ -51,9 +48,6 @@ public class Exercise {
   }
   // i     0   1   2   3   4
 // suma  0   1   3   6   10
-
-
-
 
 
   //stwórz tablice, która zawiera liczby od 1 do 50
@@ -74,7 +68,7 @@ public class Exercise {
         System.out.print(tab1[i] + ",");//drukowanie tablicy
       }
     }
-System.out.println("");
+    System.out.println("");
   }
 }
 

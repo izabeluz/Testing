@@ -1,7 +1,7 @@
 package pl.allegro;
 
 public class Exercise {
-  public static void main(String[] args) {//metoda main,
+  public  void increaseNumber(String[] args) {//metoda main,
     System.out.print("Liczby podzielne przez 7 z zakresu od 13 do 170 to :");
     int licznik = 0;
     for (int i = 13; i <= 170; i++) {//pętla
@@ -15,7 +15,7 @@ public class Exercise {
   }
 
 
-  public static void counter(String[] args) {//metoda counter
+  public  void calculateNumber(String[] args) {//metoda counter
     System.out.print("Liczby podzielne przez 7 z zakresu od 13 do 170 to :");
     int licznik = 0;
     for (int i = 13; i <= 170; i++) {
@@ -36,7 +36,7 @@ public class Exercise {
   // ile liczb od 1 w góre jest potrzebnych, aaby ich suma przekroczyła wartosc 800
   // 1  = 1 , 3, 6 , 10, 15, 21, 28 ... 830
   // Potrzeba symu od 1 do 23 liczb aby przekroczyc 800
-  public static void value(String[] args) {
+  public void getMaxValue(String[] args) {
     int i = 1;
     int suma = 0;//początkowa wartość
     while (suma <= 800) {//kiedy suma jest mniejsza rowna 800
@@ -54,7 +54,7 @@ public class Exercise {
   // wypisz liczby parzyste, z tym ze kazda linia ma miec 3 cyfry np
   // 2,4,6
   // 10,12,14
-  public static void evenNumber(String[] args) {
+  public  void getMaxNumber(String[] args) {
     System.out.print("Liczby parzyste to :");
     int[] tab1 = new int[50];//tablica
     int licznik = 0;

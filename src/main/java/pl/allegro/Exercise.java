@@ -1,21 +1,32 @@
 package pl.allegro;
 
 public class Exercise {
-  public  void increaseNumber(String[] args) {//metoda main,
-    System.out.print("Liczby podzielne przez 7 z zakresu od 13 do 170 to :");
-    int licznik = 0;
-    for (int i = 13; i <= 170; i++) {//pętla
-      if (i % 7 == 0) {//warunek
-        licznik++;//zwiekszanie zmiennej
-        System.out.print(i + ",");//wydrukowanie warunku
-      }
-    }
-    System.out.println("");//nowa linia
-    System.out.println("Ilość liczb podzielnych przez 7 to: " + licznik);
+  public int sum(int a, int b) {//dwa dowolne parametry
+    return a + b;
+  }
+
+  public String test() {
+    return "Ala ma kota";
+
   }
 
 
-  public  void calculateNumber(String[] args) {//metoda counter
+  public void increaseNumber(int numberBy, int start, int end) {//metoda main,
+    System.out.print("Liczby podzielne przez " + numberBy + "z zakresu od " + start + " do " + end + " to :");
+    int licznik = 0;
+    for (int i = start; i <= end; i++) {//pętla
+      if (i % numberBy == 0) {//warunek dla dowolnej zmiennej
+        licznik++;//zwiekszanie zmiennej
+        System.out.print(i + ",");//wydrukowanie warunku
+      }//
+
+    }
+    System.out.println("");//nowa linia
+    System.out.println("Ilość liczb podzielnych przez " + numberBy + " to: " + licznik);
+  }
+
+
+  public void calculateNumber() {//metoda counter
     System.out.print("Liczby podzielne przez 7 z zakresu od 13 do 170 to :");
     int licznik = 0;
     for (int i = 13; i <= 170; i++) {
@@ -36,7 +47,7 @@ public class Exercise {
   // ile liczb od 1 w góre jest potrzebnych, aaby ich suma przekroczyła wartosc 800
   // 1  = 1 , 3, 6 , 10, 15, 21, 28 ... 830
   // Potrzeba symu od 1 do 23 liczb aby przekroczyc 800
-  public void getMaxValue(String[] args) {
+  public static void getMaxValue() {
     int i = 1;
     int suma = 0;//początkowa wartość
     while (suma <= 800) {//kiedy suma jest mniejsza rowna 800
@@ -54,7 +65,7 @@ public class Exercise {
   // wypisz liczby parzyste, z tym ze kazda linia ma miec 3 cyfry np
   // 2,4,6
   // 10,12,14
-  public  void getMaxNumber(String[] args) {
+  public void getMaxNumber() {
     System.out.print("Liczby parzyste to :");
     int[] tab1 = new int[50];//tablica
     int licznik = 0;

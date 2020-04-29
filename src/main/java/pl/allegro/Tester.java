@@ -12,7 +12,8 @@ public class Tester {
 //    System.out.println(exercise1.sum(suma1, suma2));
 //    System.out.println(exercise1.test());
     // napisz mi liczbu podzielne przez 13 od 20 do 3000
-    exercise1.increaseNumber(13, 20, 3000);//
+    //exercise1.increaseNumber(13, 20, 3000);//
+    double calculation = exercise1.getCalculation(10, 15);
 
 
   }

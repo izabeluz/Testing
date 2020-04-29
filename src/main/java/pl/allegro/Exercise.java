@@ -2,7 +2,7 @@ package pl.allegro;
 
 public class Exercise {
   public int sum(int a, int b) {//dwa dowolne parametry
-    return a + b;
+    return a + b;// zwracanie dwóch parametrów
   }
 
   public String test() {
@@ -11,7 +11,7 @@ public class Exercise {
   }
 
 
-  public void increaseNumber(int numberBy, int start, int end) {//metoda main,
+  public void increaseNumber(int numberBy, int start, int end) {//metoda main, parametry podane
     System.out.print("Liczby podzielne przez " + numberBy + "z zakresu od " + start + " do " + end + " to :");
     int licznik = 0;
     for (int i = start; i <= end; i++) {//pętla
@@ -81,7 +81,22 @@ public class Exercise {
     }
     System.out.println("");
   }
+
+
+  public double getCalculation(int x, int y) {
+    int długosc = x;
+    int wysokośc = y;
+    double wynik = x * y * 0.5;
+    return x * y * 0.5;
+
+  }
 }
+
+
+
+
+
+
 
 
 

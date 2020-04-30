@@ -83,12 +83,49 @@ public class Exercise {
   }
 
 
-  public double getCalculation(int x, int y) {
-    int długosc = x;
-    int wysokośc = y;
-    double wynik = x * y * 0.5;
-    return x * y * 0.5;
+  public double getTriangleArea(int a, int h) {
+    return a * h * 0.5;
 
+  }
+
+  public int getTriangleObwod(int a, int b, int c) {
+    return a + b + c;
+  }
+
+  public int getMaximumNumber(int numbers[]) {//tablica intów
+    int max = numbers[0];//wartosc z indeksem zerowym, pierwsza wartosc
+    for (int i = 0; i < numbers.length; i++) {// przejscie po całej tablicy
+      if (numbers[i] > max) {
+        ;//jesli element tablicy jest wiekszy niz max ,
+        max = numbers[i];//przypisaniie elkementu do max
+      }
+    }
+    return max;
+
+  }
+
+  public int getMinimumNumber(int numbers[]) {
+    int min = numbers[0];//indesk zerowy
+    for (int i = 0; i < numbers.length; i++) {
+      if (numbers[i] < min) {//jesli element tablicy mniejszy niz min
+        min = numbers[i];//przypisanie elementu do min
+      }
+
+    }
+    return min;
+  }
+
+
+  public double getAverageNumber(int numbers[]) {
+    int average = numbers[0];
+    double sum = 0;//przypisanie zmiennej typu double do wartsoci
+    for (int i = 0; i < numbers.length; i++) {
+      sum = sum + numbers[i];//sumowanie liczb
+      double y = sum / numbers[i];//suma podzilena przez tablice liczb
+    }
+
+
+    return average;
   }
 }
 

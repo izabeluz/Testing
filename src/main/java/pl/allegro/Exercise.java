@@ -120,9 +120,9 @@ public class Exercise {
     int average = numbers[0];
     double sum = 0;//przypisanie zmiennej typu double do wartsoci
     for (int i = 0; i < numbers.length; i++) {
-      sum = sum + numbers[i];//sumowanie liczb
-      sum = sum / numbers.length;//suma podzilena przez tablice liczb
+      sum = sum + numbers[i];
     }
+    sum = sum / numbers.length;//suma podzilena przez tablice liczb
 
     return sum;
 

@@ -121,9 +121,8 @@ public class Exercise {
     double sum = 0;//przypisanie zmiennej typu double do wartsoci
     for (int i = 0; i < numbers.length; i++) {
       sum = sum + numbers[i];//sumowanie liczb
-      double y = sum / numbers[i];//suma podzilena przez tablice liczb
+      double y = sum / numbers.length;//suma podzilena przez tablice liczb
     }
-
 
     return average;
   }

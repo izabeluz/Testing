@@ -88,7 +88,7 @@ public class Exercise {
 
   }
 
-  public int getTriangleObwod(int a, int b, int c) {
+  public int getTriangleCircut(int a, int b, int c) {
     return a + b + c;
   }
 
@@ -127,6 +127,18 @@ public class Exercise {
     return sum;
 
   }
+
+
+  public double getCalculateCostOfTravel(double a, double b, double c, double d) {
+    return (a * b / c) * d;
+
+
+  }
+
+  public int getCalculateNumbers(int a, int b, int c) {
+    return a + b + c;
+  }
+
 }
 
 

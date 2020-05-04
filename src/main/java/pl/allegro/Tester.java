@@ -28,8 +28,8 @@ public class Tester {
     exercise1.getCalculateNumbers(7, 20, 55);
     exercise1.getCalculateCostOfTravel(372, 5.5, 100, 3.79);
     System.out.println(exercise1.getCalculateCostOfTravel(372, 5.5, 100, 3.79));*/
-    exercise1.getCalculateSavings(2000, 2, 100);
-    System.out.println(exercise1.getCalculateSavings(2000, 2, 100));
+    exercise1.getCalculateSavings(2000, 2, 7.4);
+    System.out.println(exercise1.getCalculateSavings(2000, 2, 7.4));
 
 
   }

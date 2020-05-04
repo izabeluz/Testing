@@ -133,6 +133,11 @@ public class Exercise {
     return a + b + c;
   }
 
+  public double getCalculateOfMoney(double a, double b, double c) {
+    return (a * b) * c + a;
+  }
+
+
 }
 
 

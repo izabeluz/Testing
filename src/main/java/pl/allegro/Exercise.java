@@ -133,8 +133,8 @@ public class Exercise {
     return a + b + c;
   }
 
-  public double getCalculateOfMoney(double a, double b, double c) {
-    return (a * b) * c + a;
+  public double getCalculateSavings(int money, int time, int procent) {
+    return (money * 7.4) / procent * time + money;
   }
 
 

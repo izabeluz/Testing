@@ -11,7 +11,8 @@ public class Exercise {
   }
 
 
-  public void increaseNumber(int numberBy, int start, int end) {/*method increaseNumber, returns nothing, accepts arguments of type int **/
+  /*method increaseNumber, returns nothing, accepts arguments of type int */
+  public void increaseNumber(int numberBy, int start, int end) {
     System.out.print("Liczby podzielne przez " + numberBy + "z zakresu od " + start + " do " + end + " to :");
     int counter = 0;
     for (int i = start; i <= end; i++) {
@@ -26,7 +27,8 @@ public class Exercise {
   }
 
 
-  public void calculateNumber() {/*metoda counter returns nothing, nothing accepts*/
+  /*metoda  returns nothing, nothing accepts*/
+  public void calculateNumber() {
     System.out.print("Liczby podzielne przez 7 z zakresu od 13 do 170 to :");
     int counter = 0;
     for (int i = 13; i <= 170; i++) {
@@ -44,7 +46,8 @@ public class Exercise {
   }
 
 
-  public static void getMaxValue() {/*method static, nothing returns, nothing accepts*/
+  /*method static, nothing returns, nothing accepts*/
+  public static void getMaxValue() {
     int i = 1;
     int sum = 0;//value of begining
     while (sum <= 800) {//when the sum is lees than 800
@@ -60,7 +63,8 @@ public class Exercise {
   // print even numbers, but aeach line has to have 3 digits for example,
   // 2,4,6
   // 10,12,14
-  public void getMaxNumber() {/*method nothnig return, nothing qaccepts*/
+  /*method nothnig return, nothing qaccepts*/
+  public void getMaxNumber() {
     System.out.print("Liczby parzyste to :");
     int[] tab1 = new int[50];//board
     int counter = 0;
@@ -78,16 +82,20 @@ public class Exercise {
   }
 
 
-  public double getTriangleArea(int a, int h) {/*method return result, method accepts argument type int*/
+  /*method return result, method accepts argument type int*/
+  public double getTriangleArea(int a, int h) {
     return a * h * 0.5;
 
   }
 
-  public int getTriangleCircut(int a, int b, int c) {/*method return result, method accepts arguments type int*/
+  /*method return result, method accepts arguments type int*/
+  public int getTriangleCircut(int a, int b, int c) {
     return a + b + c;
   }
 
-  public int getMaximumNumber(int numbers[]) {/*method return max numbers, method accepts board of int*/
+
+  /*method return max numbers, method accepts board of int*/
+  public int getMaximumNumber(int numbers[]) {
     int max = numbers[0];//value with zero index, first value
     for (int i = 0; i < numbers.length; i++) {// crossing the board
       if (numbers[i] > max) {
@@ -98,7 +106,8 @@ public class Exercise {
 
   }
 
-  public int getMinimumNumber(int numbers[]) {/*method return min numbers, method accepts argumnets type int */
+  /*method return min numbers, method accepts argumnets type int */
+  public int getMinimumNumber(int numbers[]) {
     int min = numbers[0];
     for (int i = 0; i < numbers.length; i++) {
       if (numbers[i] < min) {
@@ -110,9 +119,10 @@ public class Exercise {
   }
 
 
-  public double getAverageNumber(int numbers[]) {/*method return sum of average numbers, accepts arguments type int*/
+  /*method return sum of average numbers, accepts arguments type int*/
+  public double getAverageNumber(int numbers[]) {
     int average = numbers[0];
-    double sum = 0;//przypisanie zmiennej typu double do wartsoci
+    double sum = 0;
     for (int i = 0; i < numbers.length; i++) {
       sum = sum + numbers[i];
     }
@@ -122,19 +132,21 @@ public class Exercise {
 
   }
 
-
-  public double getCalculateCostOfTravel(double a, double b, double c, double d) {/*method return result of mathematical operation, accepts argumments type dupble*/
+  /*method return result of mathematical operation, accepts argumments type dupble*/
+  public double getCalculateCostOfTravel(double a, double b, double c, double d) {
     return (a * b / c) * d;
 
 
   }
 
-  public int getCalculateNumbers(int a, int b, int c) {/*method return result of mathematical operation, accepts arguments type int*/
+  /*method return result of mathematical operation, accepts arguments type int*/
+  public int getCalculateNumbers(int a, int b, int c) {
     return a + b + c;
   }
 
-  public double getCalculateSavings(int money, int time, int procent) {
-    return (money * 7.4) / procent * time + money;
+  /*method return savings, accepts arguments type int*/
+  public double getCalculateSavings(int money, int time, double procent) {
+    return (money * procent) / 100 * time + money;
   }
 
 

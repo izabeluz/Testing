@@ -4,8 +4,8 @@ import java.awt.*;
 
 public class Tester {
   public static void main(String[] args) {
-    Exercise exercise1 = new Exercise();//one object
-    exercise1.calculateNumber();//calling the  method on the object
+    Exercise exercise1 = new Exercise();/*
+    exercise1.calculateNumber();/*calling the  method on the object
     exercise1.getMaxNumber();
     Exercise.getMaxValue();//calling static method ont the class
     exercise1.increaseNumber(13,20,3000);//
@@ -27,7 +27,9 @@ public class Tester {
     System.out.println(exercise1.getAverageNumber(tab));
     exercise1.getCalculateNumbers(7, 20, 55);
     exercise1.getCalculateCostOfTravel(372, 5.5, 100, 3.79);
-    System.out.println(exercise1.getCalculateCostOfTravel(372, 5.5, 100, 3.79));
+    System.out.println(exercise1.getCalculateCostOfTravel(372, 5.5, 100, 3.79));*/
+    exercise1.getCalculateOfMoney(500, 0.074, 5);
+    System.out.println(exercise1.getCalculateOfMoney(500, 0.074, 5));
 
 
   }

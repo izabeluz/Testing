@@ -1,7 +1,5 @@
 package pl.allegro;
 
-import java.awt.*;
-
 public class Tester {
   public static void main(String[] args) {
     Exercise exercise1 = new Exercise();/*
@@ -27,9 +25,14 @@ public class Tester {
     System.out.println(exercise1.getAverageNumber(tab));
     exercise1.getCalculateNumbers(7, 20, 55);
     exercise1.getCalculateCostOfTravel(372, 5.5, 100, 3.79);
-    System.out.println(exercise1.getCalculateCostOfTravel(372, 5.5, 100, 3.79));*/
+    System.out.println(exercise1.getCalculateCostOfTravel(372, 5.5, 100, 3.79));
     exercise1.getCalculateSavings(2000, 2, 7.4);
-    System.out.println(exercise1.getCalculateSavings(2000, 2, 7.4));
+    System.out.println(exercise1.getCalculateSavings(2000, 2, 7.4));*/
+    exercise1.getCalculateOfGeometricFigure();
+
+
+
+
 
 
   }

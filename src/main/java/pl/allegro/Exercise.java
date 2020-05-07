@@ -149,7 +149,14 @@ public class Exercise {
     return (money * procent) / 100 * time + money;
   }
 
+  public void getCalculateOfGeometricFigure() {
+    int beam = 5;
+    double field = (beam * beam * 3.14);
+    double circuit = (2 * beam * 3.14);
+    double diameter = (2 * beam);
+    System.out.println(("Pole koła wynosi:" + field + ", Obwód koła wynosi:" + circuit + ", Srednica koła wynosi:" + diameter));
 
+  }
 }
 
 

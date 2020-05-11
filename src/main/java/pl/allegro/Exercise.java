@@ -151,12 +151,21 @@ public class Exercise {
 
   public void getCalculateOfGeometricFigure() {
     int beam = 5;
-    double field = (beam * beam * 3.14);
-    double circuit = (2 * beam * 3.14);
-    double diameter = (2 * beam);
-    System.out.println(("Pole koła wynosi:" + field + ", Obwód koła wynosi:" + circuit + ", Srednica koła wynosi:" + diameter));
+    double field = beam * beam * 3.14;
+    double circuit = 2 * beam * 3.14;
+    double diameter = 2 * beam;
+    //jesli chce pole drukujr pole, jesli chche srednice drukuje srednice,
 
   }
+
+
+
+  public void getDayOfWeek() {
+    String[] tab1 = new String[] {"monday", "tuesday", "wednesday", "thursday", "friday", "saturday", "sunday"};
+
+  }
+
+
 }
 
 

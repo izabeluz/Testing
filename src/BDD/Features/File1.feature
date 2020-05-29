@@ -1,13 +1,12 @@
 Feature: searching for the the right equipment
   Scenario: the user selects the product according to the filters used
 
-    Given  as a user I open the page "https://allegro.pl/"
-    When the consent window appears
-    Then close consent window
-    And  choose departments Elektronika
-    And  choose categories Komputery
-    And choose printer and scaners categories
+    Given  as a user I opened page "https://allegro.pl/"
+    When agreement window appears
+    Then close agreement window
+    And  choose department Elektronika
+    And  choose category Komputery
+    And choose printer categories and scanners
     And selects filter auction
-    And close kurier information if is invisile
-    And click the first of the offers
-    Then button kup teraz is not visible
+    And click the first of the promoted offers
+    Then button Kup teraz is visible

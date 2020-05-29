@@ -15,7 +15,7 @@ import java.util.ArrayList;
 import java.util.Random;
 import java.util.concurrent.TimeUnit;
 
-public class Allegro {
+public class AllegroFile2 {
 
   private WebDriver driver;
   private Random random = new Random();
@@ -59,21 +59,22 @@ public class Allegro {
   @And("^choose printer categories and scanners$")
   public void choosePrinterCategoriesAndScanners() {
     closePreviousTab();
-    driver.findElement(By.xpath("//div[@data-box-name='Categories']//a[text()='Drukarki i skanery']")).click();
+    driver.findElement(By.xpath("//div[@data-box-name='Categories']//a[contains(text(), 'Drukarki i skanery')]")).click();
+
 
   }
 
   @And("^close Kurier w allegro popup if visible$")
   public void closeKurierWAllegroIfVisible() {
-    final WebElement element = driver.findElement(By.xpath("//div[@id='opbox-listing-filters']//button[text()='zamknij']"));
+    final WebElement element = driver.findElement(By.xpath("//div[@id='opbox-listing-filters']//button[contains(text()='zamknij')]"));
     if (element != null)
       element.click();
 
+  }
 
-
-  }@And("^selects filter auction$")
+  @And("^selects filter auction$")
   public void selectsFilterAuction() {
-    driver.findElement(By.xpath("//div[@class='opbox-listing-filters'}//a/span[text() ='auction']")).click();
+    driver.findElement(By.xpath("//div[@class='opbox-listing-filters']//a/span[text() ='licytacje']")).click();
   }
 
 

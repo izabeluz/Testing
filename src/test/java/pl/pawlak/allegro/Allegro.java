@@ -15,7 +15,7 @@ import java.util.ArrayList;
 import java.util.Random;
 import java.util.concurrent.TimeUnit;
 
-public class AllegroFile2 {
+public class Allegro {
 
   private WebDriver driver;
   private Random random = new Random();

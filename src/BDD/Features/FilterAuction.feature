@@ -1,4 +1,4 @@
-Feature: searching for the the right equipment
+Feature: searching for the right equipment
   Scenario: the user selects the product according to the filters used
 
     Given  as a user I opened page "https://allegro.pl/"

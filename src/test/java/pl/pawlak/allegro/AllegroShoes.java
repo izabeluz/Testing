@@ -56,7 +56,7 @@ public class AllegroShoes {
 
   @And("^choose obuwie category$")
   public void chooseObuwieCategory() {
-    driver.findElement(By.xpath("//")).click();
+    driver.findElement(By.xpath("//div[@data-box-name='category ona']/div/div/div/div/ul/li[3]a")).click();
   }
 
   @Then("^user choose sportowe$")

@@ -51,10 +51,12 @@ public class AllegroShoes {
 
   @Then("^choose ONA category$")
   public void chooseONACategory() {
+    driver.findElement(By.xpath("//div[@data-box-name='Pełna nawigacja']/nav/div/div/ul/li/a")).click();
   }
 
   @And("^choose obuwie category$")
   public void chooseObuwieCategory() {
+    driver.findElement(By.xpath("//")).click();
   }
 
   @Then("^user choose sportowe$")

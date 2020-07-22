@@ -56,11 +56,12 @@ public class AllegroShoes {
 
   @And("^choose obuwie category$")
   public void chooseObuwieCategory() {
-    driver.findElement(By.xpath("//div[@data-box-name='category ona']/div/div/div/div/ul/li[3]a")).click();
+    driver.findElement(By.xpath("//div[@data-box-name='category - ona']//a[contains(text(),'Obuwie')]")).click();
   }
 
   @Then("^user choose sportowe$")
   public void userChooseSportowe() {
+    driver.findElement(By.xpath("//div[@data-box-name='Categories']//a[contains(text(),'Sportowe')]")).click();
   }
 
   @Then("^choose cena powyżej (\\d+)$")

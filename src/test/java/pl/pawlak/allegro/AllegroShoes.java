@@ -11,6 +11,7 @@ import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 
 import java.util.Random;
+import java.util.concurrent.TimeUnit;
 
 public class AllegroShoes {
 
@@ -57,11 +58,14 @@ public class AllegroShoes {
   @And("^choose obuwie category$")
   public void chooseObuwieCategory() {
     driver.findElement(By.xpath("//div[@data-box-name='category - ona']//a[contains(text(),'Obuwie')]")).click();
+
   }
 
   @Then("^user choose sportowe$")
   public void userChooseSportowe() {
-    driver.findElement(By.xpath("//div[@data-box-name='Categories']//a[contains(text(),'Sportowe')]")).click();
+    driver.manage().timeouts().implicitlyWait(3, TimeUnit.SECONDS);
+    driver.findElement(By.xpath("//div[@data-role='Categories']//a[contains(text(),'Sportowe')]")).click();
+
   }
 
   @Then("^choose cena powyżej (\\d+)$")

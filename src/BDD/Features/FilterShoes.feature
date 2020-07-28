@@ -8,9 +8,10 @@ Feature: looking for the right sport footwear
     Then choose ONA category
     And  choose obuwie category
     Then user choose sportowe
-    Then choose cena powyżej 350
-    And choose rozmiar 40
-    And choose kolor czarny
-    And choose marka adidas
-    And choose stan nowe
-    Then user select filter popularność:największa
+    Then user choose nowe
+    And choose kup teraz
+    Then user choose price powyżej 350
+    Then user choose mark adidas
+    Then user choose size 40
+    And choose the color czarny
+

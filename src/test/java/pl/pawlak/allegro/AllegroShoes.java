@@ -68,29 +68,34 @@ public class AllegroShoes {
 
   }
 
-  @Then("^choose cena powyżej (\\d+)$")
-  public void chooseCenaPowyżej(int arg0) {
+  @Then("^user choose nowe$")
+  public void userChooseNowe() {
+    driver.manage().timeouts().implicitlyWait(100, TimeUnit.SECONDS);
+    driver.findElement(By.xpath("//div[@class='opbox-listing-filters']//a/span[text()= 'nowe']")).click();
+
   }
 
-  @And("^choose rozmiar (\\d+)$")
-  public void chooseRozmiar(int arg0) {
+  @And("^choose kup teraz$")
+  public void chooseKupTeraz() {
+
   }
 
-  @And("^choose kolor czarny$")
-  public void chooseKolorCzarny() {
+  @Then("^user choose price powyżej (\\d+)$")
+  public void userChoosePricePowyżej(int arg0) {
+
   }
 
-  @And("^choose marka adidas$")
-  public void chooseMarkaAdidas() {
+  @Then("^user choose mark adidas$")
+  public void userChooseMarkAdidas() {
+
   }
 
-  @And("^choose stan nowe$")
-  public void chooseStanNowe() {
+  @Then("^user choose size (\\d+)$")
+  public void userChooseSize(int arg0) {
+
   }
 
-  @Then("^user select filter popularność:największa$")
-  public void userSelectFilterPopularnośćNajwiększa() {
+  @And("^choose the color czarny$")
+  public void chooseTheColorCzarny() {
   }
-
-
 }

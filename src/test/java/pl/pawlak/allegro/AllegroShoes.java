@@ -8,7 +8,11 @@ import cucumber.api.java.en.When;
 import org.junit.Assert;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
+import org.openqa.selenium.support.ui.ExpectedConditions;
+import org.openqa.selenium.support.ui.WebDriverWait;
+
 
 import java.util.Random;
 import java.util.concurrent.TimeUnit;
@@ -18,6 +22,7 @@ public class AllegroShoes {
 
   private WebDriver driver;
   private Random random = new Random();
+  private Object Time;
 
   private void setUp() {
     System.setProperty("webdriver.chrome.driver",
@@ -70,8 +75,8 @@ public class AllegroShoes {
 
   @Then("^user choose nowe$")
   public void userChooseNowe() {
-    driver.manage().timeouts().implicitlyWait(100, TimeUnit.SECONDS);
     driver.findElement(By.xpath("//div[@class='opbox-listing-filters']//a/span[text()= 'nowe']")).click();
+    driver.manage (). timeouts (). implicitlyWait (20, TimeUnit.SECONDS);
 
   }
 

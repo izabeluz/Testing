@@ -66,7 +66,8 @@ public class Allegro {
 
   @And("^close Kurier w allegro popup if visible$")
   public void closeKurierWAllegroIfVisible() {
-    final WebElement element = driver.findElement(By.xpath("//div[@id='opbox-listing-filters']//button[contains(text()='zamknij')]"));
+    driver.manage().timeouts().implicitlyWait(3, TimeUnit.SECONDS);
+    final WebElement element = driver.findElement(By.xpath("//div[@class='opbox-listing-filters']//button[contains(text(),'zamknij')]"));
     if (element != null)
       element.click();
 

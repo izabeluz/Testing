@@ -74,7 +74,7 @@ public class Allegro {
 
   @And("^selects filter auction$")
   public void selectsFilterAuction() {
-    driver.findElement(By.xpath("//div[@class='opbox-listing-filters']//a/span[text() ='licytacje']")).click();
+    driver.findElement(By.xpath("//div[@class='opbox-listing-filters']//a/span[text()='licytacje']")).click();
   }
 
 

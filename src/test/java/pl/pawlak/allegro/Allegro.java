@@ -52,6 +52,7 @@ public class Allegro {
 
   @And("^choose category Komputery$")
   public void chooseCategoryKomputery() {
+    driver.manage().timeouts().implicitlyWait(20, TimeUnit.SECONDS);
     driver.findElement(By.xpath("//div[@data-box-name='category - Elektronika']/div/ul/li[2]/a")).click();
   }
 
@@ -66,7 +67,7 @@ public class Allegro {
 
   @And("^close Kurier w allegro popup if visible$")
   public void closeKurierWAllegroIfVisible() {
-    driver.manage().timeouts().implicitlyWait(3, TimeUnit.SECONDS);
+    driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
     final WebElement element = driver.findElement(By.xpath("//div[@class='opbox-listing-filters']//button[contains(text(),'zamknij')]"));
     if (element != null)
       element.click();
@@ -75,7 +76,8 @@ public class Allegro {
 
   @And("^selects filter auction$")
   public void selectsFilterAuction() {
-    driver.findElement(By.xpath("//div[@class='opbox-listing-filters']//a/span[text()='licytacje']")).click();
+    driver.manage().timeouts().implicitlyWait(20, TimeUnit.SECONDS);
+    driver.findElement(By.xpath("//div[@class='opbox-listing-filters']//span[contains(text(),'licytacje']")).click();
   }
 
 

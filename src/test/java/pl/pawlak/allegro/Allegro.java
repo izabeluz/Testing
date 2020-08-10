@@ -77,13 +77,13 @@ public class Allegro {
   @And("^selects filter auction$")
   public void selectsFilterAuction() {
     driver.manage().timeouts().implicitlyWait(20, TimeUnit.SECONDS);
-    driver.findElement(By.xpath("//div[@class='opbox-listing-filters']//span[contains(text(),'licytacje']")).click();
+    driver.findElement(By.xpath("//div[@class='opbox-listing-filters']//span[text()='licytacje']")).click();
   }
 
 
   @And("^selects filter kup teraz$")
   public void selectsFilterKupTeraz() {
-    driver.findElement(By.xpath("//div[@class='opbox-listing-filters']//a/span[text()='kup teraz']")).click();
+    driver.findElement(By.xpath("//div[@class='opbox-listing-filters']//span[text()='kup teraz']")).click();
     driver.manage().timeouts().implicitlyWait(3, TimeUnit.SECONDS);
 
   }

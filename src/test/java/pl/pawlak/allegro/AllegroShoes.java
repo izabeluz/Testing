@@ -57,7 +57,8 @@ public class AllegroShoes {
 
   @Then("^choose ONA category$")
   public void chooseONACategory() {
-    driver.findElement(By.xpath("//div[@data-box-name='Pełna nawigacja']/nav/div/div/ul/li/a")).click();
+    driver.manage().timeouts().implicitlyWait(5, TimeUnit.SECONDS);
+    driver.findElement(By.xpath("//div[@data-box-name='Pełna nawigacja']//a[contains(text(),'Ona')]")).click();
   }
 
   @And("^choose obuwie category$")
@@ -75,8 +76,8 @@ public class AllegroShoes {
 
   @Then("^user choose nowe$")
   public void userChooseNowe() {
-    driver.findElement(By.xpath("//div[@class='opbox-listing-filters']//a/span[text()= 'nowe']")).click();
-    driver.manage (). timeouts (). implicitlyWait (20, TimeUnit.SECONDS);
+    driver.findElement(By.xpath("//div[@class='opbox-listing-filters']//span[text()='nowe']")).click();
+
 
   }
 

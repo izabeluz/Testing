@@ -76,13 +76,14 @@ public class AllegroShoes {
 
   @Then("^user choose nowe$")
   public void userChooseNowe() {
-    driver.findElement(By.xpath("//div[@class='opbox-listing-filters']//span[text()='nowe']")).click();
+    driver.findElement(By.xpath("//div[@class='_3e3a8_2252v']//span[text()='nowe']")).click();
 
 
   }
 
   @And("^choose kup teraz$")
   public void chooseKupTeraz() {
+    driver.findElement(By.xpath("//div[@class='_3e3a8_2252v']//span[text()= 'kup teraz']")).click();
 
   }
 

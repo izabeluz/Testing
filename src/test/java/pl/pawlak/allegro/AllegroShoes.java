@@ -89,6 +89,7 @@ public class AllegroShoes {
 
   @Then("^user choose price powyżej (\\d+)$")
   public void userChoosePricePowyżej(int arg0) {
+    driver.findElement(By.xpath("//div[@class='opbox-listing-filters']//label[text()='powyżej 350zł']")).click();
 
   }
 

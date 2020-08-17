@@ -10,8 +10,8 @@ Feature: looking for the right sport footwear
     Then user choose sportowe
     Then user choose nowe
     And choose kup teraz
-    Then user choose price powyżej 350
+    Then user choose price poniżej 50
     Then user choose mark adidas
-    Then user choose size 40
+    Then user choose size 38
     And choose the color czarny
 

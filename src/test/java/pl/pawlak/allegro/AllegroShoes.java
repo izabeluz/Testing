@@ -88,9 +88,9 @@ public class AllegroShoes {
   }
 
 
-  @Then("^user choose price poniżej (\\d+)$")
-  public void userChoosePricePoniżej(int arg0) {
-    driver.findElement(By.xpath("//div[@class='opbox-listing-filters']//label[@class='_u2xi2 _18vat _1qo4n _3e3a8_Q-Y6y'][last()]")).click();
+  @Then("^user choose price powyżej (\\d+)$")
+  public void userChoosePricePowyżej(int arg) {
+    driver.findElement(By.xpath("//div[@class='opbox-listing-filters']//fieldset[4]//li[5]")).click();
   }
 
   @Then("^user choose mark adidas$")
@@ -102,13 +102,14 @@ public class AllegroShoes {
 
   @Then("^user choose size (\\d+)$")
   public void userChooseSize(int arg0) {
-    driver.findElement(By.xpath("//div[@class='_3e3a8_2252v']//label[@class= '_u2xi2 _1xzdi _1wulo _1vzz9 _3e3a8_3Bcvi'][span='38']")).click();
+    driver.findElement(By.xpath("//div[@class='_3e3a8_2252v']//li[2]/label[span='38']")).click();
 
   }
 
   @And("^choose the color czarny$")
   public void chooseTheColorCzarny() {
   }
+
 
 
 }

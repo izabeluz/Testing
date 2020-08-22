@@ -14,4 +14,6 @@ Feature: looking for the right sport footwear
     Then user choose mark adidas
     Then user choose size 38
     And choose the color czarny
+    And then when user click the button little star in right corner on the product
+    Then  the user at this point is redirected to the login page
 

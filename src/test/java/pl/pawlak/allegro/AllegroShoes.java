@@ -108,8 +108,12 @@ public class AllegroShoes {
 
   @And("^choose the color czarny$")
   public void chooseTheColorCzarny() {
+    driver.findElement(By.xpath("//div[@class='_3e3a8_2252v']//li[2]/label[1][span='czarny']")).click();
   }
 
 
-
+  @And("^then when user click the button little star in right corner on the product$")
+  public void thenWhenUserClickTheButtonLittleStarInRightCornerOnTheProduct() {
+    driver.findElement(By.xpath("//div[@class='_9c44d_2WDgw']//a")).click();
+  }
 }

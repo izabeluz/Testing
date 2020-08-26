@@ -109,11 +109,22 @@ public class AllegroShoes {
   @And("^choose the color czarny$")
   public void chooseTheColorCzarny() {
     driver.findElement(By.xpath("//div[@class='_3e3a8_2252v']//li[2]/label[1][span='czarny']")).click();
+
   }
 
+  @Then("^user click first produkt from the promoted list$")
+  public void userClickFirstProduktFromThePromotedList() {
+    driver.findElement(By.xpath("//div[@id='opbox-listing--gallery']/div/section/article[4]/div/div[1]/div[2]/a")).click();
+
+  }
 
   @And("^then when user click the button little star in right corner on the product$")
   public void thenWhenUserClickTheButtonLittleStarInRightCornerOnTheProduct() {
-    driver.findElement(By.xpath("//div[@class='_9c44d_2WDgw']//a")).click();
+
+  }
+
+
+  @Then("^the user at this point is redirected to the login page$")
+  public void theUserAtThisPointIsRedirectedToTheLoginPage() {
   }
 }

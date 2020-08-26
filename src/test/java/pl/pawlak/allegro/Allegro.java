@@ -91,7 +91,7 @@ public class Allegro {
   @And("^click the first of the promoted offers$")
   public void clickTheFirstOfThePromotedOffers() {
     driver.findElement(By.xpath("//div[@id='opbox-listing--base']/div/section/article[1]")).click();
-    driver.manage().timeouts().implicitlyWait(3, TimeUnit.SECONDS);
+
   }
 
 

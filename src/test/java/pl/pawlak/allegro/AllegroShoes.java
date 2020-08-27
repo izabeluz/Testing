@@ -112,10 +112,9 @@ public class AllegroShoes {
 
   }
 
-  @Then("^user click first produkt from the promoted list$")
-  public void userClickFirstProduktFromThePromotedList() {
-    driver.findElement(By.xpath("//div[@id='opbox-listing--gallery']/div/section/article[4]/div/div[1]/div[2]/a")).click();
-
+  @And("^click the first product of the promoted offers$")
+  public void clickTheFirstProductOfThePromotedOffers() {
+    driver.findElement(By.xpath("//div[@id='opbox-listing--gallery']/div/section/article[1]")).click();
   }
 
   @And("^then when user click the button little star in right corner on the product$")
@@ -127,4 +126,6 @@ public class AllegroShoes {
   @Then("^the user at this point is redirected to the login page$")
   public void theUserAtThisPointIsRedirectedToTheLoginPage() {
   }
+
+
 }
